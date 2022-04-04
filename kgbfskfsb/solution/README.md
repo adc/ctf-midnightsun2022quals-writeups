@@ -18,6 +18,11 @@ Our trigger looks like this
 curl -H "X-Forwarded-For: 95.173.136.71" kgb.target:15555/scan?url=http://0x0y0z.d5184c01.rbndr.us/
 
 ## Stage 2 -- Detonator
+0) Set up a recursive domain name server with your registrar
+
+see https://www.splitbrain.org/blog/2008-11/02-dns_tunneling_made_simple
+
+
 
 The hint for the challenge says `DeNiS Sergeev wants a secret mission payload.`, alluding to DNS. 
 
