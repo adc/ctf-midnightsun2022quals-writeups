@@ -1,6 +1,6 @@
 # ctf-midnightsun2022quals-writeups                                                      
 
-HackingForSoju invited me (an HFS veteran) to contribute some challenges from the qualification round.
+HackingForSoju invited me (a HFS veteran) to contribute some challenges to the qualification round.
 
 The teams struggled to solve these challenges and not many scored but many teams got very close.
 
