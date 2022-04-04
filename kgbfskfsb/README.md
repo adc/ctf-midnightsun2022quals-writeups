@@ -7,7 +7,7 @@ This challenge contained the hint:
 Note that D N and S are capitalized (DNS). 
 
 You can build and run the docker containers yourself if you'd like to try it out.
-NOTE: you need a /home/ctf/detonations/ folder owned by the nobody user, which is bind mounted by docker.
+NOTE: you need a /home/ctf/detonations/ folder owned by the nobody user, which is a volume mounted by docker.
 
 ## Challenge design:
 
