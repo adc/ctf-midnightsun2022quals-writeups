@@ -5,8 +5,8 @@
 1) X-Forwarded-For bypass:
 Include the header with the IP
 
-2) IP check bypass
-Include multiple IPs in a domain entry or use DNS rebinding (like rbndr.us). DNS Rebinding was the intended solution
+2) IP check bypass:
+-Include multiple IPs in a domain entry or use DNS rebinding (like rbndr.us). DNS Rebinding was the intended solution
 
 3) How to use /detonate and satisfy the 127.0.0.1 ip check:
 
