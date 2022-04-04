@@ -1,6 +1,6 @@
 # learn2pipe
 
-This is a reference to remind people how to use a terminal
+This is a reference for how to programatically use a pty
 
 ## flag.c
 
