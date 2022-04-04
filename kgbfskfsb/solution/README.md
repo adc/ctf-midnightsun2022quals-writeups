@@ -38,6 +38,8 @@ tunnel.yourdomain.com {
   errors
 }
 
+#./coredns -conf config
+
 ```
 
 ```
