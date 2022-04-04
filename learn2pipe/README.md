@@ -29,7 +29,7 @@ int main () {
 
 ```
 
-To understand the problem, consider the following usages:
+To understand the problem, consider the following:
 ```
 #in a terminal
 adc@ctf:~/ctf$ ./flag 
