@@ -1,0 +1,37 @@
+version: '2'
+services:
+  oligarch:
+    restart: always
+    security_opt:
+      - seccomp:chrome.json
+    build:
+      context: browser
+    container_name: blyatblaster_browser
+    networks:
+      yachty:
+        ipv4_address: 192.168.10.2
+      default:
+    ports:
+      - "8888:8888"
+    read_only: true
+    tmpfs:
+      - /tmp
+  blyatblaster:
+    restart: always
+    build:
+      context: speaker
+    working_dir: /
+    container_name: blyatblaster_speaker
+    environment:
+      PIN: 2422
+    entrypoint: "/midnightsun.ctf.blyat.blaster"
+    networks:
+      yachty:
+        ipv4_address: 192.168.10.?
+      default:
+networks:
+  yachty:
+    driver: ipvlan
+    ipam:
+        config:
+          - subnet: 192.168.10.0/24

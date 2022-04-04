@@ -1,0 +1,38 @@
+NOTE: you need a /home/ctf/detonations/ folder owned by the nobody user, which is bind mounted by docker.
+
+version: '2'
+services:
+  kgbfskfsb:
+    build:
+      context: target
+    working_dir: /
+    ports:
+      - "15555:15555"
+    entrypoint: "/midnightsun.ctf.kgbfskfsb"
+    networks:
+      kgb:
+        ipv4_address: 192.168.42.2
+      default:
+    volumes:
+      - /home/ctf/detonations:/detonations
+    read_only: true
+    extra_hosts:
+      - "test.com:159.65.24.100"
+
+  detonator:
+    build:
+      context: detonator
+    networks:
+      kgb:
+        ipv4_address: 192.168.42.10
+    entrypoint: "/midnightsun.ctf.kgbfskfsb_detonator"
+    volumes:
+      - /home/ctf/detonations:/detonations:ro
+    read_only: true
+
+networks:
+  kgb:
+    driver: ipvlan
+    ipam:
+        config:
+          - subnet: 192.168.42.0/24
